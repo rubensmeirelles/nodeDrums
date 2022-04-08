@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Drums</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/"><h1>Lista de baterias</h1></a>
+        <form action="search" method="GET">
+            <input type="search" name="search" placeholder="Pesquisar por marca" value="{{ query }}">
+        </form>
+    </header>
+    <div class="drums">
+        <ul>
+            <li class="{{#menu.all}}active{{/menu.all}}"><a href="/">Todas</a></li>
+            <li class="{{#menu.acoustic}}active{{/menu.acoustic}}"><a href="/acoustic">Acústicas</a></li>
+            <li class="{{#menu.eletronic}}active{{/menu.eletronic}}"><a href="/eletronic">Eletrônicas</a></li>
+        </ul>
+    </div>

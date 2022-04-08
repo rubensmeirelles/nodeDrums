@@ -1,0 +1,20 @@
+{{>partials/headerEletronic}}
+    <div class="container">
+        <div class="drums-images">
+            {{#list}}
+                <div class="drum">
+                    <h4 class="title">{{ name }}</h4>
+                    <div class="img-drum">
+                        <img src="images/{{ image }}" alt="">
+                    </div>                
+                    <p class="description">{{ description }}</p>
+                </div>
+            {{/list}}
+        </div>
+        {{^list}}
+            <div class="no-list">
+                <h2>Nenhum item encontrado</h2>
+            </div>
+        {{/list}}
+    </div>
+{{>partials/footer}}
