@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&family=Rubik+Puddles&family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800');
 
 *{
     margin:0;
@@ -8,19 +8,29 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
 .header{
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 20px 0;
-    background-color: #333;
-    font-size: 1.2rem;
-    font-family: 'Rubik Puddles', cursive;
-    letter-spacing: 8px;
+    background-color: #34495E;
 }
 
 .header h1{
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: 8px;
     color: #f0f0f0;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 25px;
 }
 
 form{
@@ -32,73 +42,73 @@ form input{
     padding: 5px;
     outline: none;
     border-radius: 5px;
+    border: none;
 }
 .active{
-    background-color: rgb(95, 92, 92);
+    background-color: #566573;
 }
 
 .drums ul{
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-    background-color: #242e2e;
+    background-color: #212F3D;
+    flex-wrap: wrap;
 }
 
-.drums ul li{
+.drums ul li, .drums-acoustics ul li, .drums-eletronics ul li{
     padding: 10px 15px;
 }
 
-.drums ul li a{
+.drums ul li a, .drums-acoustics ul li a, .drums-eletronics ul li a{
     color: rgb(247, 242, 242);
-    font-size: 1.5rem;
-    font-family: 'Rubik Microbe', cursive;
+    font-size: 1.2em;
 }
 
-.drums ul li:hover{
-    background-color: rgb(95, 92, 92);
+.drums ul li:hover, .drums-acoustics ul li:hover, .drums-eletronics ul li:hover{
+    background-color: #566573;
 }
 
-.container{
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 25px;
-}
-
-.drums-images{
-    width: 100%;
+.drums-acoustics ul, .drums-eletronics ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #34495E;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
-.img-drum{
-    height: 200px;
-}
-.drum{
-    width: 240px;
-    cursor: pointer;
-    padding: 10px;
-    transition: all ease .3s;
-}
 
-.drum:hover{
-    background-color: #f2f2f2;
-}
-
-.drum img{
-    width: 100%;
-    height: 100%;
-    margin: 20px 0;    
-}
-
-.title{
+.card-drums{
+    max-width: 300px;
     text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #777;
-}
+    border: 1.5px solid #F2F4F4;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 1px 1px 1px 1px #EAECEE
+ }
 
-.description{
-    margin: 30px 0;
-}
+ .card-title{
+     text-align: center;
+     padding: 10px 0;
+     background-color: #EAECEE
+ }
+
+ .card-img{
+     width: 290px;
+     padding: 5px;
+ }
+
+.card-img img{
+     width: 100%;
+ }
+
+ .card-description{
+     padding: 10px;
+ }
 
 .no-list{
     color: red
@@ -112,10 +122,19 @@ footer{
     padding: 20px 0;
 }
 
+footer a{
+    color: #fafafa;
+    text-decoration: underline;
+}
+
+footer a:hover{
+    color: #2874A6;
+}
+
 .obs{
     margin-top: 10px;
-    background-color: #FF4500;
-    width: 70%;
+    background-color: #566573;
+    width: 50%;
     margin: 30px auto;
     padding: 7px;
 }
@@ -139,4 +158,36 @@ footer{
     color: #333;
     letter-spacing: .2rem;
     font-size: 1.5rem
+}
+
+@media(max-width: 700px){
+    .header h1{
+        font-size: 2em;
+    }
+
+    form input{
+        width:200px;
+    }
+
+    .drums ul li a, .drums-acoustics ul li a, .drums-eletronics ul li a{
+        font-size: 1em;
+    }
+
+    footer{
+        padding: 20px;
+    }
+
+    .obs{
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px){
+    .header h1{
+        font-size: 1.5em;
+    }
+
+    .drums ul li a, .drums-acoustics ul li a, .drums-eletronics ul li a{
+        font-size: .8em;
+    }   
 }
